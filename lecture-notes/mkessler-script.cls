@@ -34,9 +34,9 @@
 % edit the source file and build the class again.
 % 
 % Build details:
-%   Build time: 2021/10/08 14:56
-%   PyTeX version: v1.0.0-2 (commit 6c0dee2)
-%   LatexPackages version: v2.1.0-17 (commit 424f6aa)
+%   Build time: 2021/10/08 18:04
+%   PyTeX version: v1.0.0-3 (commit 4409c94)
+%   LatexPackages version: v2.1.0-18 (commit 250ec89)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
