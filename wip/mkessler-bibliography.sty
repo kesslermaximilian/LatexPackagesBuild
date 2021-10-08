@@ -34,9 +34,9 @@
 % edit the source file and build the package again.
 % 
 % Build details:
-%   Build time: 2021/10/08 14:39
+%   Build time: 2021/10/08 14:53
 %   PyTeX version: v1.0.0-2 (commit 6c0dee2)
-%   LatexPackages version: v2.1.0-15 (commit d69ab83)
+%   LatexPackages version: v2.1.0-16 (commit 92d667a)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
@@ -66,14 +66,14 @@
 
 %Provide simpler commands to properly print image attributions and literature
 \DeclareRobustCommand*{\printimageattributions}{
-    \def\imageattributionstitle{\ifenglish Image attributions \else Bildquellen\fi}
+    \def\imageattributionstitle{\ifmkessler@bibliography@english Image attributions \else Bildquellen\fi}
     \phantomsection
     \addcontentsline{toc}{section}{\imageattributionstitle}
     \printbibliography[title={\imageattributionstitle}, type=image]
 }
 
 \DeclareRobustCommand*{\printliterature}{
-    \def\literaturetitle{\ifenglish Literature\else Literatur\fi}
+    \def\literaturetitle{\ifmkessler@bibliography@english Literature\else Literatur\fi}
     \phantomsection
     \addcontentsline{toc}{section}{\literaturetitle}
     \printbibliography[title={\literaturetitle}, nottype=image]
