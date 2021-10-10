@@ -34,13 +34,13 @@
 % edit the source file and build the package again.
 % 
 % Build details:
-%   Build time: 2021/10/08 07:41
-%   PyTeX version: v1.0.0 (commit dbdd99c)
-%   LatexPackages version: v2.1.0-12 (commit 2fcf4e2)
+%   Build time: 2021/10/10 12:01
+%   PyTeX version: v1.0.0-3 (commit 4409c94)
+%   LatexPackages version: v2.2.0 (commit 785ad43)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mkessler-mathalias}[2021/10/08 - Easy aliasing for math style commands]
+\ProvidesPackage{mkessler-mathalias}[2021/10/10 - Easy aliasing for math style commands]
 
 
 
@@ -53,7 +53,7 @@
 \DeclareOptionX{extended}{\mkessler@mathalias@extendedtrue\mkessler@mathalias@basictrue}
 
 \DeclareOptionX*{\PackageWarning{mkessler-mathalias}{Unknown '\CurrentOption'}}
-\ProcessOptionsX\relax
+\ProcessOptionsX*\relax
 
 
 %Usage: \makealiasesforwith\<mathcommand>{<prefix>}{<Set of letters>}

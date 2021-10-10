@@ -34,13 +34,13 @@
 % edit the source file and build the package again.
 % 
 % Build details:
-%   Build time: 2021/10/08 07:41
-%   PyTeX version: v1.0.0 (commit dbdd99c)
-%   LatexPackages version: v2.1.0-12 (commit 2fcf4e2)
+%   Build time: 2021/10/10 12:01
+%   PyTeX version: v1.0.0-3 (commit 4409c94)
+%   LatexPackages version: v2.2.0 (commit 785ad43)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mkessler-fancythm}[2021/10/08 - Theorem-Environment Package]
+\ProvidesPackage{mkessler-fancythm}[2021/10/10 - Theorem-Environment Package]
 
 
 %Provides fancy theorem-like-environments used in the write-ups of my lecture notes
@@ -126,9 +126,9 @@
 
 %%%%% Option section
 \newif\ifmkessler@fancythm@english\mkessler@fancythm@englishtrue
-\DeclareOption{german}{\mkessler@fancythm@englishfalse}
-\DeclareOption{ngerman}{\mkessler@fancythm@englishfalse}
-\DeclareOption{english}{\mkessler@fancythm@englishtrue}
+\DeclareOptionX{german}{\mkessler@fancythm@englishfalse}
+\DeclareOptionX{ngerman}{\mkessler@fancythm@englishfalse}
+\DeclareOptionX{english}{\mkessler@fancythm@englishtrue}
 
 \DeclareOptionX{showdaggers}{\setkeys{mkessler-fancythm}{mkessler@fancythm@showdaggers=#1}}
 \DeclareOptionX{ownenvironments}{\setkeys{mkessler-fancythm}{ownenvironments=#1}}
@@ -138,7 +138,7 @@
 \DeclareOptionX{numbersmallenvironments}{\setkeys{mkessler-fancythm}{mkessler@fancythm@numbersmallenvironments=#1}}
 
 \DeclareOptionX*{\PackageWarning{mkessler-fancythm}{Unknown '\CurrentOption'}}
-\ProcessOptionsX\relax
+\ProcessOptionsX*\relax
 
 
 %%%%%%%% Implementation section

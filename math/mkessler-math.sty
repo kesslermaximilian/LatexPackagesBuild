@@ -34,13 +34,13 @@
 % edit the source file and build the package again.
 % 
 % Build details:
-%   Build time: 2021/10/08 07:41
-%   PyTeX version: v1.0.0 (commit dbdd99c)
-%   LatexPackages version: v2.1.0-12 (commit 2fcf4e2)
+%   Build time: 2021/10/10 12:01
+%   PyTeX version: v1.0.0-3 (commit 4409c94)
+%   LatexPackages version: v2.2.0 (commit 785ad43)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mkessler-math}[2021/10/08 - Main math package.]
+\ProvidesPackage{mkessler-math}[2021/10/10 - Main math package.]
 
 
 % Collects the basic math packages used for my lecture-note write-ups
@@ -56,7 +56,7 @@
 \DeclareOptionX{english}{\mkessler@math@englishtrue}
 
 \DeclareOptionX*{\PackageWarning{mkessler-math}{Unknown '\CurrentOption'}}
-\ProcessOptionsX\relax
+\ProcessOptionsX*\relax
 
 
 %%%% Import the other custom math packages

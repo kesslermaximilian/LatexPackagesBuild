@@ -34,21 +34,21 @@
 % edit the source file and build the package again.
 % 
 % Build details:
-%   Build time: 2021/10/08 07:41
-%   PyTeX version: v1.0.0 (commit dbdd99c)
-%   LatexPackages version: v2.1.0-12 (commit 2fcf4e2)
+%   Build time: 2021/10/10 12:01
+%   PyTeX version: v1.0.0-3 (commit 4409c94)
+%   LatexPackages version: v2.2.0 (commit 785ad43)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mkessler-bibliography}[2021/10/08 - Package to easily print bibliography and image attributions in document]
+\ProvidesPackage{mkessler-bibliography}[2021/10/10 - Package to easily print bibliography and image attributions in document]
 
 
 \RequirePackage{xkeyval}
 
 \newif\ifmkessler@bibliography@english\mkessler@bibliography@englishtrue
-\DeclareOption{german}{\mkessler@bibliography@englishfalse}
-\DeclareOption{ngerman}{\mkessler@bibliography@englishfalse}
-\DeclareOption{english}{\mkessler@bibliography@englishtrue}
+\DeclareOptionX{german}{\mkessler@bibliography@englishfalse}
+\DeclareOptionX{ngerman}{\mkessler@bibliography@englishfalse}
+\DeclareOptionX{english}{\mkessler@bibliography@englishtrue}
 
 \def\mkessler@bibliography@bibfile{bibliography.bib}
 \def\mkessler@bibliography@imagefile{images.bib}
@@ -56,7 +56,7 @@
 \DeclareOptionX{imagefile}[images.bib]{\def\mkessler@bibliography@imagefile{#1}}
 
 \DeclareOptionX*{\PackageWarning{mkessler-bibliography}{Unknown '\CurrentOption'}}
-\ProcessOptionsX\relax
+\ProcessOptionsX*\relax
 
 
 %%%%Bibliography management
@@ -66,14 +66,14 @@
 
 %Provide simpler commands to properly print image attributions and literature
 \DeclareRobustCommand*{\printimageattributions}{
-    \def\imageattributionstitle{\ifenglish Image attributions \else Bildquellen\fi}
+    \def\imageattributionstitle{\ifmkessler@bibliography@english Image attributions \else Bildquellen\fi}
     \phantomsection
     \addcontentsline{toc}{section}{\imageattributionstitle}
     \printbibliography[title={\imageattributionstitle}, type=image]
 }
 
 \DeclareRobustCommand*{\printliterature}{
-    \def\literaturetitle{\ifenglish Literature\else Literatur\fi}
+    \def\literaturetitle{\ifmkessler@bibliography@english Literature\else Literatur\fi}
     \phantomsection
     \addcontentsline{toc}{section}{\literaturetitle}
     \printbibliography[title={\literaturetitle}, nottype=image]
