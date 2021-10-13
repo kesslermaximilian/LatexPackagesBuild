@@ -34,9 +34,9 @@
 % edit the source file and build the package again.
 % 
 % Build details:
-%   Build time: 2021/10/13 08:05
+%   Build time: 2021/10/13 18:11
 %   PyTeX version: v1.0.0-3 (commit 4409c94)
-%   LatexPackages version: v2.2.0-2 (commit f8f6a87)
+%   LatexPackages version: v2.2.0-3 (commit 4e7a2cb)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
@@ -80,5 +80,12 @@
 
 %Make circled symbols
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+    \node[shape=circle,draw,inner sep=2pt] (char) {#1};}
+}
+
+% When dealing with chain complexes, one often uses a bullet as placeholder for the index to mean the whole chain:
+\newcommand\chainpullet{\bullet}
+
+
+
 
