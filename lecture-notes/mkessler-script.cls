@@ -34,13 +34,13 @@
 % edit the source file and build the class again.
 % 
 % Build details:
-%   Build time: 2021/10/10 12:01
+%   Build time: 2021/10/14 06:47
 %   PyTeX version: v1.0.0-3 (commit 4409c94)
-%   LatexPackages version: v2.2.0 (commit 785ad43)
+%   LatexPackages version: v2.2.0-4 (commit ef818c9)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{mkessler-script}[2021/10/10 - Write up lecture notes as script]
+\ProvidesClass{mkessler-script}[2021/10/14 - Write up lecture notes as script]
 
 
 

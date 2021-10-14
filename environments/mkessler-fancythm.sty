@@ -34,13 +34,13 @@
 % edit the source file and build the package again.
 % 
 % Build details:
-%   Build time: 2021/10/10 12:01
+%   Build time: 2021/10/14 06:47
 %   PyTeX version: v1.0.0-3 (commit 4409c94)
-%   LatexPackages version: v2.2.0 (commit 785ad43)
+%   LatexPackages version: v2.2.0-4 (commit ef818c9)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mkessler-fancythm}[2021/10/10 - Theorem-Environment Package]
+\ProvidesPackage{mkessler-fancythm}[2021/10/14 - Theorem-Environment Package]
 
 
 %Provides fancy theorem-like-environments used in the write-ups of my lecture notes
@@ -136,6 +136,8 @@
 
 \DeclareOptionX{lecturenumbers}{\setkeys{mkessler-fancythm}{mkessler@fancythm@lecturenumbers=#1}}
 \DeclareOptionX{numbersmallenvironments}{\setkeys{mkessler-fancythm}{mkessler@fancythm@numbersmallenvironments=#1}}
+
+\DeclareOptionX{defaulttheorems}{\setkeys{mkessler-fancythm}{mkessler@fancythm@defaulttheorems=#1}}
 
 \DeclareOptionX*{\PackageWarning{mkessler-fancythm}{Unknown '\CurrentOption'}}
 \ProcessOptionsX*\relax

@@ -34,13 +34,13 @@
 % edit the source file and build the package again.
 % 
 % Build details:
-%   Build time: 2021/10/10 12:01
+%   Build time: 2021/10/14 06:47
 %   PyTeX version: v1.0.0-3 (commit 4409c94)
-%   LatexPackages version: v2.2.0 (commit 785ad43)
+%   LatexPackages version: v2.2.0-4 (commit ef818c9)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mkessler-mathsymb}[2021/10/10 - Some extra math-related symbols.]
+\ProvidesPackage{mkessler-mathsymb}[2021/10/14 - Some extra math-related symbols.]
 
 
 % A collection of math-related symbols / tools I often use, mainly collected together from Stack Overflow or hacked together myself
@@ -80,5 +80,12 @@
 
 %Make circled symbols
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+    \node[shape=circle,draw,inner sep=2pt] (char) {#1};}
+}
+
+% When dealing with chain complexes, one often uses a bullet as placeholder for the index to mean the whole chain:
+\newcommand\chainbullet{\bullet}
+
+
+
 
