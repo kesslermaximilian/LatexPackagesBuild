@@ -34,13 +34,13 @@
 % edit the source file and build the class again.
 % 
 % Build details:
-%   Build time: 2021/10/14 06:56
+%   Build time: 2021/10/16 07:03
 %   PyTeX version: v1.0.0-3 (commit 4409c94)
-%   LatexPackages version: v2.2.0-5 (commit ceb6113)
+%   LatexPackages version: v2.2.0-7 (commit fbd489a)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{mkessler-sheet}[2021/10/14 - Write up university exercise sheets]
+\ProvidesClass{mkessler-sheet}[2021/10/16 - Write up university exercise sheets]
 
 
 
@@ -116,3 +116,9 @@
 
 %Für Zeilenabstand 1,5
 \RequirePackage[onehalfspacing]{setspace}
+\RequirePackage[super]{nth}
+
+\newcommand\nr[1]{
+    \section*{\ifmkessler@sheet@english\nth{#1} exercise\else #1. Aufgabe\fi}
+    \setcounter{equation}{0}
+}

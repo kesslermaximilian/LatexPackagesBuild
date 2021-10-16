@@ -34,40 +34,49 @@
 % edit the source file and build the package again.
 % 
 % Build details:
-%   Build time: 2021/10/14 06:56
+%   Build time: 2021/10/16 07:03
 %   PyTeX version: v1.0.0-3 (commit 4409c94)
-%   LatexPackages version: v2.2.0-5 (commit ceb6113)
+%   LatexPackages version: v2.2.0-7 (commit fbd489a)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mkessler-exsheet}[2021/10/14 - Include exercise sheets into lecture notes easily.]
+\ProvidesPackage{mkessler-exsheet}[2021/10/16 - Include exercise sheets into lecture notes easily.]
 
 
 
 \RequirePackage{xkeyval}
 \newif\ifmkessler@exsheet@english\mkessler@exsheet@englishtrue
-\DeclareOption{german}{\mkessler@exsheet@englishfalse}
-\DeclareOption{ngerman}{\mkessler@exsheet@englishfalse}
-\DeclareOption{english}{\mkessler@exsheet@englishtrue}
+\DeclareOptionX{german}{\mkessler@exsheet@englishfalse}
+\DeclareOptionX{ngerman}{\mkessler@exsheet@englishfalse}
+\DeclareOptionX{english}{\mkessler@exsheet@englishtrue}
 
-\DeclareOption*{\PackageWarning{mkessler-exsheet}{Unknown '\CurrentOption'}}
-\ProcessOptions\relax
+\DeclareOptionX*{\PackageWarning{mkessler-exsheet}{Unknown '\CurrentOption'}}
+\ProcessOptionsX*\relax
 
 
 \RequirePackage{mkessler-fancythm}
 
+
+\def\mkessler@exsheet@sheet{
+    \ifmkessler@exsheet@english Exercise Sheet\else Übungsblatt\fi
+}
+
 \newcounter{mkessler@exsheet@sheet}
 
-\declaretheorem[style=thmgreenmargin, numberwithin=mkessler@exsheet@sheet, name=\ifmkessler@exsheet@english Exercise\else Aufgabe\fi]{mkessler@exsheet@aufgabe}
+\declaretheorem[style=thmgreenmargin, numberwithin=mkessler@exsheet@sheet, name=\ifmkessler@exsheet@english Exercise\else Aufgabe\fi]{mkessler@exsheet@sheetexercise}
 
 \usepackage{xkeyval}
 
-\NewDocumentEnvironment{aufgabe}{O{}}{
-\begin{mkessler@exsheet@aufgabe\expandafter}\if\relax\detokenize{#1}\relax\else[#1]\fi\label{aufgabe-\themkessler@exsheet@aufgabe}
+\NewDocumentEnvironment{sheetexercise}{O{}}{
+\begin{mkessler@exsheet@sheetexercise\expandafter}\if\relax\detokenize{#1}\relax\else[#1]\fi\label{exercise-\themkessler@exsheet@sheetexercise}
 }{
-    \end{mkessler@exsheet@aufgabe\expandafter}\relax
+    \end{mkessler@exsheet@sheetexercise\expandafter}\relax
 }
 
-\newcommand\blatt{\refstepcounter{mkessler@exsheet@sheet}\subsection*{\themkessler@exsheet@sheet. Übungsblatt}\addcontentsline{toc}{subsection}{\themkessler@exsheet@sheet. Übungsblatt}}
+\newcommand\exercisesheet{
+    \refstepcounter{mkessler@exsheet@sheet}
+    \subsection*{\themkessler@exsheet@sheet. \mkessler@exsheet@sheet}
+    \addcontentsline{toc}{subsection}{\themkessler@exsheet@sheet. \mkessler@exsheet@sheet}
+}
 
 
