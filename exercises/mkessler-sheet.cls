@@ -34,13 +34,13 @@
 % edit the source file and build the class again.
 % 
 % Build details:
-%   Build time: 2021/10/16 07:03
+%   Build time: 2021/10/17 14:13
 %   PyTeX version: v1.0.0-3 (commit 4409c94)
-%   LatexPackages version: v2.2.0-7 (commit fbd489a)
+%   LatexPackages version: v2.2.1 (commit db62b98)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{mkessler-sheet}[2021/10/16 - Write up university exercise sheets]
+\ProvidesClass{mkessler-sheet}[2021/10/17 - Write up university exercise sheets]
 
 
 
