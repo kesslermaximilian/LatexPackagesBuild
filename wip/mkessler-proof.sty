@@ -34,13 +34,13 @@
 % edit the source file and build the package again.
 % 
 % Build details:
-%   Build time: 2021/10/17 14:13
-%   PyTeX version: v1.0.0-3 (commit 4409c94)
-%   LatexPackages version: v2.2.1 (commit db62b98)
+%   Build time: 2021/10/18 16:06
+%   PyTeX version: v1.0.0-5 (commit 05f53a9)
+%   LatexPackages version: v2.2.1-11 (commit 4b47033)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mkessler-proof}[2021/10/17 - Automatic references to theorems in proofs. Claim counters within proofs]
+\ProvidesPackage{mkessler-proof}[2021/10/18 - Automatic references to theorems in proofs. Claim counters within proofs]
 
 
 
@@ -143,3 +143,6 @@
 
 %%Solution (for exercises)
 \newenvironment{solution}[1][]{\begin{proof}[\ifmkessler@proof@english{}Solution\else{}Lösung\fi{}#1]}{\end{proof}}
+
+
+%% just a test
